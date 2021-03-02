@@ -44,3 +44,41 @@ class HelloWorld {
        System.out.println(ldt);
     }
 }
+
+
+
+
+# Demonstration of various collections 
+
+import java.util.*;
+
+class HelloWorld {
+    
+    public static void main(String[] args) {
+       List<String> lst=new ArrayList<>();
+       lst.add("Amit");
+       lst.add("Kumar");
+       lst.add("Thakur");
+       Iterator<String> it = lst.iterator();
+       while(it.hasNext()){
+           System.out.println(it.next());
+       }
+       Map<String,Integer> m=new HashMap<>();
+       m.put("Amit",100);
+       m.put("Antony",58);
+       m.put("Samson",54);
+       Set<String> keys = m.keySet();
+       Iterator<String> it2=keys.iterator();
+       while(it2.hasNext()){
+           String key=it2.next();
+           System.out.println("The marks obtained by "+key+" is "+m.get(key));
+       }
+       lst.forEach(System.out::println);
+       System.out.println("****************************");
+       for(String val:lst){
+           System.out.println(val);
+       }
+    
+        
+    }
+}
